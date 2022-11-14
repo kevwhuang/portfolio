@@ -5,12 +5,13 @@ function changeTheme() {
     if (sessionStorage.getItem('Theme') == 0) {
         themeLight()
     }
-    else {
+    else if (sessionStorage.getItem('Theme') == 1) {
         themeDark()
     }
 }
 
 function themeLight() {
+
     for (let i = 0; i < all.length; i++) {
         e = document.querySelectorAll(all[i])
         for (let j = 0; j < e.length; j++) {
@@ -19,9 +20,12 @@ function themeLight() {
             e[j].style.color = 'black'
         }
     }
-    document.querySelector('body').style.backgroundColor = 'gainsboro'
-    document.querySelector('iframe').style.borderColor = 'black'
     sessionStorage.setItem('Theme', 0)
+    document.querySelector('body').style.backgroundColor = 'gainsboro'
+    try {
+        document.querySelector('iframe').style.borderColor = 'black'
+    }
+    catch { }
 }
 
 function themeDark() {
@@ -33,9 +37,12 @@ function themeDark() {
             e[j].style.color = 'azure'
         }
     }
-    document.querySelector('body').style.backgroundColor = 'black'
-    document.querySelector('iframe').style.borderColor = 'azure'
     sessionStorage.setItem('Theme', 1)
+    document.querySelector('body').style.backgroundColor = 'black'
+    try {
+        document.querySelector('iframe').style.borderColor = 'azure'
+    }
+    catch { }
 }
 
 function drag(e) {
