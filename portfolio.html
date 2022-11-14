@@ -18,7 +18,7 @@
     <script src="scripts.js" defer></script>
     <base href="" target="_self">
 
-    <title>AP DESIGNS - HELLO</title>
+    <title>AP DESIGNS - PORTFOLIO</title>
     <noscript>Your browser does not support scripts.</noscript>
 
     <style>
@@ -35,7 +35,7 @@
 
         <h1>AP Designs by Kevin Huang</h1>
 
-        <nav hidden>
+        <nav>
 
             <button onclick="document.location='about.html'">About</button>
             <button onclick="document.location='resume.html'">Resume</button>
@@ -66,16 +66,14 @@
 
     <hr>
 
-    <main id="index">
+    <main id="portfolio">
 
-        <div ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img id="myDrag" src="assets/padlock.png" alt="Bitmap of four different color quadrants" draggable="true"
-                ondragstart="drag(event)" width="512" height="512">
-        </div>
+        <div><a href="https://kevwhuang.github.io/barbershop" target="myFrame">Mustacchio</a></div>
+        <div><a href="https://kevwhuang.github.io/filter" target="myFrame">Filter</a></div>
 
-        <div ondrop="drop(event)" ondragover="allowDrop(event)">
-            <p id="removeMe">Drag Lock Here To Begin...</p>
-        </div>
+        <iframe id="myFrame" name="myFrame" title="Browser window for viewing GitHub projects." width="80%"
+            height="500">
+        </iframe>
 
     </main>
 

@@ -1,33 +1,230 @@
+:root {
+    --color-accent: teal;
+    --color-active: crimson;
+    --color-border: gray;
+    --color-main: azure;
+    --color-secondary: slateblue;
+    --color-text: black;
+    --font-button: Copperplate, fantasy;
+    --font-head: 'Lucida Handwriting', cursive;
+    --font-text: Arial, sans-serif;
+    --size-large: 45px;
+    --size-medium: 30px;
+    --size-small: 15px;
+}
+
 * {
+    background-color: var(--color-main);
+    box-sizing: border-box;
+    color: var(--color-text);
+    font-family: var(--font-text);
     margin: 0;
 }
 
+/* ================================================== */
+
+header,
+main,
+footer,
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px 50px;
+    justify-content: center;
+    margin: auto;
+    max-width: 80%;
+    padding: 25px;
+    text-align: center;
+}
+
+main#about,
+main#portfolio,
+main#resume,
+form {
+    flex-direction: column;
+}
+
+/* ================================================== */
+
+body {
+    background-color: gainsboro;
+}
+
+h1 {
+    font-family: var(--font-head);
+    font-size: var(--size-medium);
+}
+
+h2 {
+    font-family: var(--font-text);
+    font-size: var(--size-medium);
+}
+
+hr {
+    background-color: var(--color-secondary);
+    border: none;
+    height: 3px;
+    margin: auto;
+    width: 80%;
+}
+
 p {
-    font-size: 20px;
-    padding: 2px;
+    font-size: var(--size-small);
+    margin: auto;
+    width: 80%;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+textarea {
+    resize: none;
+    text-align: left;
 }
 
-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+/* ================================================== */
+
+header button {
+    border: none;
+    font-family: var(--font-button);
+    font-size: var(--size-medium);
+    padding: 15px;
+    text-transform: uppercase;
 }
 
-aside {
-    display: grid;
-    grid-template-columns: 1fr;
+header button:hover {
+    color: var(--color-accent);
 }
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+header button:active {
+    color: var(--color-active);
 }
 
-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 5fr 1fr 1fr 1fr;
+header img {
+    height: auto;
+    margin: 5px;
+    max-width: 40px;
+}
+
+/* ================================================== */
+
+main#about img {
+    height: auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+main#contact form>* {
+    border: 2px solid black;
+    border-radius: 2px;
+    font-family: var(--font-text);
+    font-size: var(--size-small);
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+main#index div {
+    height: 300px;
+    width: 300px;
+}
+
+main#index img {
+    height: auto;
+    max-width: 300px;
+    width: 100%;
+}
+
+main#index p {
+    animation: blink 1s infinite;
+    margin: 45% auto;
+    text-transform: uppercase;
+}
+
+main#portfolio a {
+    border: 2px solid black;
+    border-radius: 5px;
+    color: var(--color-text);
+    font-family: var(--font-button);
+    font-size: var(--size-small);
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+main#portfolio iframe {
+    border: 5px solid black;
+    border-radius: 5px;
+    margin: auto;
+}
+
+main#resume>* {
+    line-height: var(--size-medium);
+    margin: auto;
+    text-align: left;
+    width: 80%;
+}
+
+main#resume h2 {
+    text-transform: uppercase;
+}
+
+main#resume ul.emphasize {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+main#resume ul.none {
+    list-style-type: none;
+}
+
+main#resume ul.square {
+    list-style-type: square;
+}
+
+/* ================================================== */
+
+footer button {
+    border: 2px solid black;
+    border-radius: 5px;
+    color: var(--color-text);
+    font-family: var(--font-button);
+    font-size: var(--size-small);
+    padding: 5px 20px;
+    text-transform: uppercase;
+}
+
+footer button:hover {
+    border-color: var(--color-accent);
+}
+
+footer button:active {
+    border-color: var(--color-active);
+}
+
+footer>button {
+    background: none;
+    border: none;
+    color: black;
+    font-family: var(--font-text);
+}
+
+/* ================================================== */
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    h2 {
+        font-size: 20px;
+    }
+
+    main#resume>*,
+    main#resume li {
+        text-align: center !important;
+    }
+
 }
