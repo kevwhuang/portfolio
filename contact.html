@@ -21,58 +21,55 @@
     <title>AP DESIGNS - CONTACT</title>
     <noscript>Your browser does not support scripts.</noscript>
 
-    <style>
-    </style>
-
 </head>
 
-<body onload="changeTheme()">
+<body onload="themeLoad()">
 
-    <template>
-    </template>
+    <header class="xt">
 
-    <header>
+        <h1 class="xt">AP Designs by Kevin Huang</h1>
 
-        <h1>AP Designs by Kevin Huang</h1>
+        <nav class="xt">
 
-        <nav>
-
-            <button onclick="document.location='about.html'">About</button>
-            <button onclick="document.location='resume.html'">Resume</button>
-            <button onclick="document.location='portfolio.html'">Portfolio</button>
-            <button onclick="document.location='contact.html'">Contact</button>
+            <button class="xt" onclick="document.location='about.html'">About</button>
+            <button class="xt" onclick="document.location='resume.html'">Resume</button>
+            <button class="xt" onclick="document.location='portfolio.html'">Portfolio</button>
+            <button class="xt" onclick="document.location='contact.html'">Contact</button>
 
         </nav>
 
-        <section>
+        <section class="xt">
 
-            <a href="https://instagram.com" target="_blank">
-                <img src="assets/link-instagram.png" alt="Link to Instagram Profile" width="128" height="128"></a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="assets/link-twitter.png" alt="Link to Twitter Profile" width="128" height="128"></a>
-            <a href="https://spotify.com" target="_blank">
-                <img src="assets/link-spotify.png" alt="Link to Spotify Profile" width="128" height="128"></a>
-            <a href="https://youtube.com" target="_blank">
-                <img src="assets/link-youtube.png" alt="Link to YouTube Profile" width="128" height="128"></a>
-            <a href="https://soundcloud.com" target="_blank">
-                <img src="assets/link-soundcloud.png" alt="Link to SoundCloud Profile" width="128" height="128"></a>
+            <a class="xt" href="https://instagram.com" target="_blank">
+                <img class="xt" src="assets/link-instagram.png" alt="Link to Instagram profile" width="128"
+                    height="128"></a>
+            <a class="xt" href="https://twitter.com" target="_blank">
+                <img class="xt" src="assets/link-twitter.png" alt="Link to Twitter profile" width="128"
+                    height="128"></a>
+            <a class="xt" href="https://spotify.com" target="_blank">
+                <img class="xt" src="assets/link-spotify.png" alt="Link to Spotify profile" width="128"
+                    height="128"></a>
+            <a class="xt" href="https://youtube.com" target="_blank">
+                <img class="xt" src="assets/link-youtube.png" alt="Link to YouTube profile" width="128"
+                    height="128"></a>
+            <a class="xt" href="https://soundcloud.com" target="_blank">
+                <img class="xt" src="assets/link-soundcloud.png" alt="Link to SoundCloud profile" width="128"
+                    height="128"></a>
 
         </section>
 
     </header>
 
-    <aside>
-    </aside>
-
     <hr>
 
-    <main id="contact">
+    <main id="contact" class="xt">
 
-        <form action="contact.html" method="get" enctype="multipart/form-data">
+        <form class="xt" action="contact.html" method="get" enctype="multipart/form-data">
 
-            <input id="formText" type="text" placeholder="NAME" required>
-            <input id="formEmail" type="email" placeholder="EMAIL" required>
-            <textarea id="formArea" cols="100" rows="10" minlength="10" maxlength="500"></textarea>
+            <input id="formText" class="xt" type="text" name="Text" placeholder="NAME" required>
+            <input id="formEmail" class="xt" type="email" name="Email" placeholder="EMAIL" required>
+            <textarea id="formArea" class="xt" name="Message" cols="100" rows="10" minlength="10"
+                maxlength="500"></textarea>
             <input type="submit" value="SUBMIT">
             <input type="reset" value="RESET">
 
@@ -82,11 +79,11 @@
 
     <hr>
 
-    <footer>
+    <footer class="xt">
 
-        <button>&copy; 2023 AP DESIGNS</button>
+        <button class="xt">&copy; 2023 AP DESIGNS</button>
 
-        <div>
+        <div class="xt">
             <button onclick="themeLight()">Light</button>
             <button onclick="themeDark()">Dark</button>
         </div>

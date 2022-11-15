@@ -1,62 +1,106 @@
-all = ['form', 'input', 'textarea', 'a', 'button', 'div', 'footer', 'h1', 'h2', 'header', 'hgroup', 'img', 'li',
-    'main', 'nav', 'p', 'pre', 'section', 'ul']
+function themeLoad() {
 
-function changeTheme() {
     if (sessionStorage.getItem('Theme') == 0) {
         themeLight()
     }
     else if (sessionStorage.getItem('Theme') == 1) {
         themeDark()
     }
+
 }
 
 function themeLight() {
 
-    for (let i = 0; i < all.length; i++) {
-        e = document.querySelectorAll(all[i])
-        for (let j = 0; j < e.length; j++) {
-            e[j].style.backgroundColor = 'azure'
-            e[j].style.borderColor = 'black'
-            e[j].style.color = 'black'
-        }
-    }
     sessionStorage.setItem('Theme', 0)
-    document.querySelector('body').style.backgroundColor = 'gainsboro'
+
+    ele = document.getElementsByClassName('xt')
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.backgroundColor = 'white'
+        ele[i].style.borderColor = 'black'
+        ele[i].style.color = 'black'
+    }
+
+    ele = document.querySelectorAll('hr')
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.backgroundColor = 'steelblue'
+    }
+
+    ele = document.querySelectorAll('h2')
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.color = 'steelblue'
+    }
+
+    ele = document.getElementsByClassName('accent')
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.color = '#464BB4'
+    }
+
     try {
-        document.querySelector('iframe').style.borderColor = 'black'
+        document.querySelector('iframe').style.borderColor = 'steelblue'
     }
     catch { }
+
+    document.querySelector('body').style.backgroundColor = 'gainsboro'
+
 }
 
 function themeDark() {
-    for (let i = 0; i < all.length; i++) {
-        e = document.querySelectorAll(all[i])
-        for (let j = 0; j < e.length; j++) {
-            e[j].style.backgroundColor = '#222'
-            e[j].style.borderColor = 'azure'
-            e[j].style.color = 'azure'
-        }
-    }
+
     sessionStorage.setItem('Theme', 1)
-    document.querySelector('body').style.backgroundColor = 'black'
+
+    ele = document.getElementsByClassName('xt')
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.backgroundColor = '#222'
+        ele[i].style.borderColor = 'white'
+        ele[i].style.color = 'white'
+    }
+
+    ele = document.querySelectorAll('hr')
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.backgroundColor = 'slateblue'
+    }
+
+    ele = document.querySelectorAll('h2')
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.color = 'slateblue'
+    }
+
+    ele = document.getElementsByClassName('accent')
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.color = '#5A84CD'
+    }
+
     try {
-        document.querySelector('iframe').style.borderColor = 'azure'
+        document.querySelector('iframe').style.borderColor = 'slateblue'
     }
     catch { }
+
+    document.querySelector('body').style.backgroundColor = 'black'
+
 }
 
-function drag(e) {
-    e.dataTransfer.setData('id', e.target.id)
+function drop() {
+
+    document.getElementById('removeText').remove()
+    document.getElementById('removeImage').remove()
+
+    p = document.createElement('p')
+    p.classList.add('xt')
+    p.textContent = 'Loading...'
+    document.getElementById('addText').appendChild(p)
+
+    img = new Image(512, 512)
+    img.classList.add('xt')
+    img.src = 'assets/index-padlock-unlocked.png'
+    document.getElementById('addImage').appendChild(img)
+
+    themeLoad()
+    setTimeout(function () { document.location.href = 'about.html' }, 2000)
+
 }
 
-function drop(e) {
-    e.preventDefault()
-    var data = e.dataTransfer.getData('id')
-    document.getElementById('removeMe').remove()
-    e.target.appendChild(document.getElementById(data))
-    document.location.href = 'about.html'
-}
+function allowDrop(ele) {
 
-function allowDrop(e) {
-    e.preventDefault()
+    ele.preventDefault()
+
 }
