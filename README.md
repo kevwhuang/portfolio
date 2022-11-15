@@ -17,9 +17,10 @@
     - About page: Extended about page with *coding* and *hobbies* sections.
     - Resume page: Reimagined formatting using fieldsets and complementary colors. Fixed various texts and spacings.
 
-# TO-DO
+- 11/15/22 - Minor improvements, primarily relating to images.
+    - Added internal whitespace for png link images.
+    - Implemented padlock image alternatives with JS to bring continuity to landing page animation.
+    - Downloaded additional image assets for the about page.
+    - Filled in extra bottom white space on larger screens using `minheight: 100vh` CSS.
 
-- Downloaded additional image assets for the about page.
-- Acquired padlock image alternatives to add continuity to landing page animation.
-- Stripped png images of internal whitespace.
-- Positioned footer at bottom of viewport to fill in white space for larger screens.
+# TO-DO

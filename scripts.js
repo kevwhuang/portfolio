@@ -1,10 +1,10 @@
 function themeLoad() {
 
-    if (sessionStorage.getItem('Theme') == 0) {
-        themeLight()
-    }
-    else if (sessionStorage.getItem('Theme') == 1) {
+    if (sessionStorage.getItem('Theme') === 1) {
         themeDark()
+    }
+    else {
+        themeLight()
     }
 
 }
@@ -34,6 +34,16 @@ function themeLight() {
     for (let i = 0; i < ele.length; i++) {
         ele[i].style.color = '#464BB4'
     }
+
+    try {
+        document.getElementById('removeImage').src = 'assets/index-padlock-locked-black.webp'
+    }
+    catch { }
+
+    try {
+        document.getElementById('switchImage').src = 'assets/index-padlock-unlocked-black.webp'
+    }
+    catch { }
 
     try {
         document.querySelector('iframe').style.borderColor = 'steelblue'
@@ -71,6 +81,16 @@ function themeDark() {
     }
 
     try {
+        document.getElementById('removeImage').src = 'assets/index-padlock-locked-white.webp'
+    }
+    catch { }
+
+    try {
+        document.getElementById('switchImage').src = 'assets/index-padlock-unlocked-white.webp'
+    }
+    catch { }
+
+    try {
         document.querySelector('iframe').style.borderColor = 'slateblue'
     }
     catch { }
@@ -89,9 +109,11 @@ function drop() {
     p.textContent = 'Loading...'
     document.getElementById('addText').appendChild(p)
 
-    img = new Image(512, 512)
+    img = new Image(500, 500)
+    img.id = 'switchImage'
     img.classList.add('xt')
-    img.src = 'assets/index-padlock-unlocked.png'
+    img.src = 'assets/index-padlock-unlocked-black.webp'
+    img.alt = 'Black padlock unlocked'
     document.getElementById('addImage').appendChild(img)
 
     themeLoad()

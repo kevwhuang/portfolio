@@ -5,7 +5,7 @@
     --color-main: white;
     --color-main-dark: #222;
     --color-secondary: steelblue;
-    --color-secondary-comp: #464BB4;
+    --color-secondary-comp: #06070e;
     --color-secondary-dark: slateblue;
     --color-secondary-dark-comp: #5A84CD;
     --color-sides: gainsboro;
@@ -59,6 +59,7 @@ form {
 
 body {
     background-color: var(--color-sides);
+    min-height: 100vh;
 }
 
 fieldset {
@@ -87,7 +88,7 @@ hr {
 }
 
 iframe {
-    border: 3px solid var(--color-border);
+    border: 3px solid var(--color-secondary);
     border-radius: 3px;
     margin: auto;
 }
@@ -212,7 +213,8 @@ main#resume>* {
     width: 80%;
 }
 
-main#resume li.emp {
+main#resume li.accent {
+    color: var(--color-secondary-comp);
     font-style: italic;
     font-weight: bold;
 }
