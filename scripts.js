@@ -1,6 +1,9 @@
 function themeLoad() {
 
-    if (sessionStorage.getItem('Theme') === 1) {
+    if (sessionStorage.getItem('Theme') == 0) {
+        themeLight()
+    }
+    else if (sessionStorage.getItem('Theme') == 1) {
         themeDark()
     }
     else {
