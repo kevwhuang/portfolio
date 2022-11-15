@@ -18,9 +18,10 @@
     - Resume page: Reimagined formatting using fieldsets and complementary colors. Fixed various texts and spacings.
 
 - 11/15/22 - Minor improvements, primarily relating to images.
+    - Filled extra bottom white space on larger screens using `minheight: 100vh` CSS.
     - Added internal whitespace for png link images.
     - Implemented padlock image alternatives with JS to bring continuity to landing page animation.
-    - Downloaded additional image assets for the about page.
-    - Filled in extra bottom white space on larger screens using `minheight: 100vh` CSS.
+    - About page: Downloaded additional image assets.
+    - Resume page: Debugged formatting and improved readability.
 
 # TO-DO
