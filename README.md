@@ -24,4 +24,8 @@
     - About page: Downloaded additional image assets.
     - Resume page: Debugged formatting and improved readability.
 
+- 11/16/22 - Minor maintenance update.
+    - Added outer-page coloring using the html CSS selector.
+    - Conceived file structure hierarchy and fixed numerous file pathing issues.
+
 # TO-DO

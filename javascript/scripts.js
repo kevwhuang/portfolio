@@ -53,6 +53,7 @@ function themeLight() {
     }
     catch { }
 
+    document.querySelector('html').style.backgroundColor = 'gainsboro'
     document.querySelector('body').style.backgroundColor = 'gainsboro'
 
 }
@@ -98,9 +99,12 @@ function themeDark() {
     }
     catch { }
 
+    document.querySelector('html').style.backgroundColor = 'black'
     document.querySelector('body').style.backgroundColor = 'black'
 
 }
+
+// ====================================================================================================
 
 function drop() {
 
@@ -120,7 +124,7 @@ function drop() {
     document.getElementById('addImage').appendChild(img)
 
     themeLoad()
-    setTimeout(function () { document.location.href = 'about.html' }, 2000)
+    setTimeout(function () { document.location.href = 'html/about.html' }, 2000)
 
 }
 
