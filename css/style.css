@@ -1,0 +1,323 @@
+:root {
+    --color-active: crimson;
+    --color-border: black;
+    --color-hover: teal;
+    --color-main: white;
+    --color-main-dark: #222;
+    --color-secondary: steelblue;
+    --color-secondary-comp: #06070e;
+    --color-secondary-dark: slateblue;
+    --color-secondary-dark-comp: #5A84CD;
+    --color-sides: gainsboro;
+    --color-sides-dark: black;
+    --color-text: black;
+    --font-button: Copperplate, fantasy;
+    --font-head: 'Lucida Handwriting', cursive;
+    --font-text: Arial, sans-serif;
+    --size-large: 45px;
+    --size-medium: 30px;
+    --size-small: 15px;
+}
+
+* {
+    background-color: var(--color-main);
+    box-sizing: border-box;
+    color: var(--color-text);
+    font-family: var(--font-text);
+    margin: 0;
+}
+
+.test {
+    border: 1px solid var(--color-active) !important;
+}
+
+/* ==================================================================================================== */
+
+header,
+main,
+footer,
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin: auto;
+    max-width: 80%;
+    padding: 25px;
+    text-align: center;
+}
+
+main#about,
+main#portfolio,
+main#resume,
+form {
+    flex-direction: column;
+}
+
+/* ============================================================================================== */
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-sides);
+}
+
+fieldset {
+    border: 2px solid var(--color-border);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+html {
+    background-color: var(--color-sides);
+}
+
+h1 {
+    font-family: var(--font-head);
+    font-size: var(--size-medium);
+}
+
+h2 {
+    font-family: var(--font-text);
+    font-size: var(--size-medium);
+    text-transform: uppercase;
+}
+
+hr {
+    background-color: var(--color-secondary);
+    border: none;
+    height: 3px;
+    margin: auto;
+    width: 80%;
+}
+
+iframe {
+    border: 3px solid var(--color-secondary);
+    border-radius: 3px;
+    margin: auto;
+}
+
+legend {
+    padding: 5px;
+}
+
+p {
+    font-size: var(--size-small);
+    margin: auto;
+    width: 80%;
+}
+
+textarea {
+    resize: none;
+    text-align: left !important;
+}
+
+/* ============================================================================================== */
+
+header button {
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-button);
+    font-size: var(--size-medium);
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+header button:hover {
+    color: var(--color-hover) !important;
+}
+
+header button:active {
+    color: var(--color-active) !important;
+}
+
+header img {
+    height: auto;
+    margin: 5px;
+    max-width: 35px;
+}
+
+/* ============================================================================================== */
+
+main#about img {
+    height: auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* ============================================================================================== */
+
+main#contact form>* {
+    border: 2px solid var(--color-border);
+    border-radius: 2px;
+    font-family: var(--font-text);
+    font-size: var(--size-small);
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+main#contact input[type=reset],
+main#contact input[type=submit] {
+    background-color: var(--color-hover);
+    border: none;
+    color: var(--color-main);
+    cursor: pointer;
+}
+
+main#contact input[type=reset]:active,
+main#contact input[type=submit]:active {
+    background-color: var(--color-active);
+}
+
+/* ============================================================================================== */
+
+main#index div {
+    height: 300px;
+    width: 300px;
+}
+
+main#index img {
+    height: auto;
+    max-width: 300px;
+    width: 100%;
+}
+
+main#index p {
+    animation: 2s infinite blink;
+    border: 2px solid var(--color-border);
+    margin: 45% auto;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+/* ============================================================================================== */
+
+main#portfolio a {
+    background-color: var(--color-hover);
+    border-radius: 2px;
+    color: var(--color-main);
+    cursor: pointer;
+    font-family: var(--font-button);
+    font-size: var(--size-small);
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+main#portfolio a:active {
+    background-color: var(--color-active);
+}
+
+/* ============================================================================================== */
+
+main#resume>* {
+    line-height: 25px;
+    margin: auto;
+    text-align: left;
+    width: 80%;
+}
+
+main#resume li.accent {
+    color: var(--color-secondary-comp);
+    font-style: italic;
+    font-weight: bold;
+}
+
+main#resume li.under {
+    text-decoration: underline;
+}
+
+main#resume ul {
+    margin: auto;
+    padding-inline-start: 0;
+    width: 90%;
+}
+
+main#resume ul.none {
+    list-style-type: none;
+}
+
+main#resume ul.square {
+    list-style-type: square;
+}
+
+/* ============================================================================================== */
+
+footer button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: var(--font-button);
+    font-size: var(--size-small);
+    padding: 5px 20px;
+    text-transform: uppercase;
+}
+
+footer button:hover {
+    border-color: var(--color-hover) !important;
+}
+
+footer button:active {
+    border-color: var(--color-active) !important;
+}
+
+footer>button {
+    border: none;
+    cursor: default;
+    font-family: var(--font-text);
+}
+
+footer div button:nth-of-type(1) {
+    background-color: var(--color-main);
+    border: 2px solid var(--color-border);
+    color: var(--color-border);
+}
+
+footer div button:nth-of-type(2) {
+    background-color: var(--color-border);
+    border: 2px solid var(--color-main);
+    color: var(--color-main);
+}
+
+/* ============================================================================================== */
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    h2 {
+        font-size: 25px;
+    }
+
+    main#resume>*,
+    main#resume li {
+        list-style-position: inside;
+        text-align: center !important;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    header,
+    main,
+    footer,
+    form {
+        max-width: 100%;
+    }
+
+    header img {
+        margin: 10px 5px;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+}
